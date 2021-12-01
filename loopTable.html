@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="myTable">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Black</td>
+          <td>Vaccine</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>Nabil</td>
+          <td>Ahmed</td>
+          <td>16</td>
+        </tr>
+      </table>
+</body>
+<script>
+    var table = document.getElementById("myTable");
+    for (let i=0; i<table.rows.length; i++) {
+        let row = table.rows[i]
+        // console.log(row.innerText)
+        //iterate through rows
+        //rows would be accessed using the "row" variable assigned in the for loop
+        for (let j=0; j<row.cells.length; j++) {
+            let col = row.cells[j]
+            console.log(col.innerText)
+            //iterate through columns
+            //columns would be accessed using the "col" variable assigned in the for loop
+        }
+    }
+
+    const {width, height} = screen;
+    console.log(width, height)
+</script>
+
+</html>

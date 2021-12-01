@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            padding: 100px 30px;
+            font-size: 30px;
+            border: 2px solid #000;
+            background: #fff;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="outer" onclick="outerBox()">
+        <div id="middle" onclick="middleBox()">
+            <div id="inner" onclick="innerBox(event)">
+                Demo Even Propagation
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function innerBox(event) {
+        // event.stopPropagation();
+        document.getElementById("inner").style.backgroundColor = "yellow";
+    }
+    function middleBox(e) {
+        document.getElementById("middle").style.backgroundColor = "blue";
+
+    }
+    function outerBox(e) {
+        document.getElementById("outer").style.backgroundColor = "red";
+
+    }
+    
+</script>
+
+</html>
